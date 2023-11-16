@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <style>
+    /* Your existing CSS styles */
+    /* ... */
+
+    /* Updated styles for the smaller, darker, and more futuristic button */
+    .chatgpt-btn {
+      background-color: #2d9964; /* Darker green color */
+      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Shadow effect */
+      border: none;
+      color: white;
+      padding: 12px 40px; /* Smaller size */
+      font-size: 16px; /* Smaller font size */
+      font-family: 'Manrope';
+      border-radius: 30px; /* Increased border radius */
+      display: inline-block;
+      margin: 10px;
+      cursor: pointer;
+      outline: none;
+      transition: box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .chatgpt-btn:before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: rgba(255, 255, 255, 0.1);
+      transition: all 0.6s;
+      border-radius: 50%;
+      z-index: 0;
+      transform: scale(0);
+    }
+
+    .chatgpt-btn:hover:before {
+      transform: scale(3);
+    }
+
+    .icon {
+      margin-right: 10px;
+      /* Additional styles for the icon */
+    }
+  </style>
+</head>
+
+<body>
+  <button class="chatgpt-btn" type="button" onclick="navigate()">
+    <i class="fas fa-robot icon"></i>ChatGPT
+  </button>
+
+  <script>
+    function navigate() {
+      window.open("https://example.com", '_blank').focus();
+    }
+  </script>
+</body>
+
+</html>
