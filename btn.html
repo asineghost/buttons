@@ -7,26 +7,41 @@
     /* Your existing CSS styles */
     /* ... */
 
-    /* New styles for the green futuristic button */
+    /* Updated styles for the smaller, darker, and more futuristic button */
     .chatgpt-btn {
-      background-color: #74a892; /* Green color */
-      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Shadow effect */
-      /* Additional styles for a futuristic look */
+      background-color: #2d9964; /* Darker green color */
+      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Shadow effect */
       border: none;
       color: white;
-      padding: 15px 60px;
-      font-size: 18px;
+      padding: 12px 40px; /* Smaller size */
+      font-size: 16px; /* Smaller font size */
       font-family: 'Manrope';
-      border-radius: 20px;
+      border-radius: 30px; /* Increased border radius */
       display: inline-block;
       margin: 10px;
       cursor: pointer;
       outline: none;
       transition: box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
     }
 
-    .chatgpt-btn:hover {
-      box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.4); /* Increased shadow on hover */
+    .chatgpt-btn:before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: rgba(255, 255, 255, 0.1);
+      transition: all 0.6s;
+      border-radius: 50%;
+      z-index: 0;
+      transform: scale(0);
+    }
+
+    .chatgpt-btn:hover:before {
+      transform: scale(3);
     }
 
     .icon {
@@ -43,7 +58,7 @@
 
   <script>
     function navigate() {
-      window.open("https://chat.openai.com/", '_blank').focus();
+      window.open("https://example.com", '_blank').focus();
     }
   </script>
 </body>
