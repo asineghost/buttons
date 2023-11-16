@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <style>
+    /* Your existing CSS styles */
+    /* ... */
+
+    /* New styles for the green futuristic button */
+    .chatgpt-btn {
+      background-color: #74a892; /* Green color */
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Shadow effect */
+      /* Additional styles for a futuristic look */
+      border: none;
+      color: white;
+      padding: 15px 60px;
+      font-size: 18px;
+      font-family: 'Manrope';
+      border-radius: 20px;
+      display: inline-block;
+      margin: 10px;
+      cursor: pointer;
+      outline: none;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .chatgpt-btn:hover {
+      box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.4); /* Increased shadow on hover */
+    }
+
+    .icon {
+      margin-right: 10px;
+      /* Additional styles for the icon */
+    }
+  </style>
+</head>
+
+<body>
+  <button class="chatgpt-btn" type="button" onclick="navigate()">
+    <i class="fas fa-robot icon"></i>ChatGPT
+  </button>
+
+  <script>
+    function navigate() {
+      window.open("https://chat.openai.com/", '_blank').focus();
+    }
+  </script>
+</body>
+
+</html>
